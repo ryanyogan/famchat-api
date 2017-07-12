@@ -36,5 +36,6 @@ defmodule Famchat.Endpoint do
     key: "_famchat_key",
     signing_salt: "Lw2NfTug"
 
+  plug CORSPlug
   plug Famchat.Router
 end
