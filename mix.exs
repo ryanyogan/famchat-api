@@ -19,7 +19,7 @@ defmodule Famchat.Mixfile do
   def application do
     [mod: {Famchat, []},
      applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :comeonin]]
   end
 
   # Specifies which paths to compile per environment.
@@ -36,6 +36,9 @@ defmodule Famchat.Mixfile do
      {:postgrex, ">= 0.0.0"},
      {:gettext, "~> 0.11"},
      {:cors_plug, "~> 1.2"},
+     {:guardian, "~> 0.14"},
+     {:comeonin, "~> 2.4"},
+     {:ja_serializer, "~> 0.12"},
      {:cowboy, "~> 1.0"}]
   end
 

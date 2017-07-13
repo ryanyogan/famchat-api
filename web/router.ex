@@ -8,6 +8,8 @@ defmodule Famchat.Router do
   scope "/api", Famchat do
     pipe_through :api
 
-    resources "session", SessionController, only: [:index]
+    post "/register", RegistrationController, :create
+
+    post "/token", SessionController, :create, as: :login
   end
 end
